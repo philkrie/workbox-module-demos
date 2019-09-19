@@ -11,14 +11,14 @@ workbox.precaching.precacheAndRoute([
 
 // Demonstrates using default cache
 workbox.routing.registerRoute(
-  /.*\.(?:js)/g,
+  new RegExp('.*\.(?:js)'),
   new workbox.strategies.NetworkFirst()
 );
 
 // Demonstrates a custom cache name for a route.
 workbox.routing.registerRoute(
-  /.*\.(?:png|jpg|jpeg|svg|gif)/g,
-  workbox.strategies.cacheFirst({
+  new RegExp('.*\.(?:png|jpg|jpeg|svg|gif)'),
+  new workbox.strategies.CacheFirst({
     cacheName: 'image-cache',
     plugins: [
       new workbox.expiration.ExpirationPlugin({
