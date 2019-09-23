@@ -17,15 +17,16 @@
 
     
     <ol>
-      <li>Open DevTools</li>
-      <li>Go to the Console</li>
+      <li>Open DevTools and go to the console</li>
       <li>Click this button:<br /><button class="install-sw btn btn-outline-primary">Install Service Worker</button></li>
-      <li>You should see a 'Welcome to Workbox' message.</li>
-      <li>Refresh the page and see the requests being passed through Workbox.</li>
+      <li>You should see a workbox message appear</li>
+      <li>Refresh the page, go to the network tab, and check the "Size" of demo-img.png. It should read (ServiceWorker)</li>
     </ol>
 
     <!-- Image will be stored in a custom cache -->
     <img src="./public/demo-img.png" style="width: 300px; height: 300px;"/>
+
+    <button onclick="window.location.href='https://developers.google.com/web/tools/workbox/modules';">Back to Demos</button>
 
     <script>
       const installSWBtn = document.querySelector('.install-sw');
