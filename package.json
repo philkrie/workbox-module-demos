@@ -1,0 +1,21 @@
+{
+  "name": "workbox-gulp",
+  "version": "0.0.1",
+  "description": "The starting point for the official Workbox tutorial for gulp projects.",
+  "main": "server.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.4.0",
+    "del": "^3.0.0",
+    "run-sequence": "^2.2.0",
+    "workbox-build": "5.0.0-beta.0"
+  },
+  "engines": {
+    "node": "8.1.x"
+  },
+  "license": "Apache-2.0"
+}
