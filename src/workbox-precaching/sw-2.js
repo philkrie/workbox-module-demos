@@ -6,7 +6,7 @@ workbox.setConfig({
 
 
 workbox.precaching.precache([
-  {url: '/demo/workbox-precaching', revision: '2'},
+  {url: '/public', revision: '2'},
   'test-file.txt',
   'hello-world.5678.txt',
 ]);
