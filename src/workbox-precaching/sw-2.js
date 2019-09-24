@@ -4,9 +4,8 @@ workbox.setConfig({
   debug: true
 });
 
-
-workbox.precaching.precache([
-  {url: '/public', revision: '2'},
-  'test-file.txt',
-  'hello-world.5678.txt',
+workbox.precaching.precacheAndRoute([
+  {url: '/', revision: '2'},
+  'public/test-file.txt',
+  'public/hello-world.5678.txt',
 ]);
