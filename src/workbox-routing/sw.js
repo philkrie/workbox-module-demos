@@ -4,7 +4,6 @@ workbox.setConfig({
   debug: true
 });
 
-
 // Set logs level to `debug` to view all logs
 // workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
 
