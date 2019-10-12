@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>workbox-broadcast-update demo</title>
+      <meta name="workbox-workbox-streams demo" content="An example to demonstrate the workbox-workbox-streams module">
+      <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+        body {
+          margin-left: 5%;
+          font-family: 'Open Sans', sans-serif
+        }
+        ol {
+          padding-left: 20px
+        }
+        li {
+          margin-bottom: 5px
+        }
+        button {
+          margin: 20px 0;
+          font-weight: bold
+        }
+      </style>
+    </head>
+  <body id="page-top">
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>workbox-workbox-streams Demo</h1>
+      </div>
+    </header>
+
+  
+    <ol>
+      <li>Open DevTools</li>
+      <li>Go to the Console</li>
+      <li>
+        Click this button to add an <code>iframe</code> to this page, whose
+        body is created from multiple streamed sources:<br/>
+        <button class="make-streams-request btn btn-outline-primary">Add iframe</button>
+      </li>
+      <li>Checkout the logs for info on how the streamed response was generated.</li>
+    </ol>
+    
+    <div id="iframes">
+
+
+
+    <script>
+      const makeRequestBtn = document.querySelector('.make-streams-request');
+
+      navigator.serviceWorker.register('./sw.js').then(() => {
+        makeRequestBtn.addEventListener('click', () => {
+          const iframe = document.createElement('iframe');
+          // This URL will be handled by the service worker.
+          iframe.src = 'iframe';
+          document.querySelector('#iframes').appendChild(iframe);
+        });
+      });
+    </script>
+
+
+
+    <button onclick="window.location.href='https://developers.google.com/web/tools/workbox/modules';"> &lt- Back to Demos</button>
+
+
+  </body>
+</html>
