@@ -15,31 +15,31 @@ self.addEventListener('fetch', (event) => {
   switch (new URL(event.request.url).pathname) {
     case '/public/cache-only-empty-cache.txt':
       const cacheOnlyEmpty = new workbox.strategies.CacheOnly();
-      event.respondWith(cacheOnlyEmpty.handle({event}));
+      event.respondWith(cacheOnlyEmpty.handle({request: event.request, event: event}));
       break;
     case '/public/cache-only-populated-cache':
       const cacheOnlyPopulated = new workbox.strategies.CacheOnly();
-      event.respondWith(cacheOnlyPopulated.handle({event}));
+      event.respondWith(cacheOnlyPopulated.handle({request: event.request, event: event}));
       break;
     case '/public/cache-first.txt':
       const cacheFirst = new workbox.strategies.CacheFirst();
-      event.respondWith(cacheFirst.handle({event}));
+      event.respondWith(cacheFirst.handle({request: event.request, event: event}));
       break;
     case '/public/network-only.txt':
       const networkOnly = new workbox.strategies.NetworkOnly();
-      event.respondWith(networkOnly.handle({event}));
+      event.respondWith(networkOnly.handle({request: event.request, event: event}));
       break;
     case '/public/network-first.txt':
       const networkFirst = new workbox.strategies.NetworkFirst();
-      event.respondWith(networkFirst.handle({event}));
+      event.respondWith(networkFirst.handle({request: event.request, event: event}));
       break;
     case '/public/network-first-404.txt':
       const networkFirstInvalid = new workbox.strategies.NetworkFirst();
-      event.respondWith(networkFirstInvalid.handle({event}));
+      event.respondWith(networkFirstInvalid.handle({request: event.request, event: event}));
       break;
     case '/public/stale-while-revalidate.txt':
       const staleWhileRevalidate = new workbox.strategies.StaleWhileRevalidate();
-      event.respondWith(staleWhileRevalidate.handle({event}));
+      event.respondWith(staleWhileRevalidate.handle({request: event.request, event: event}));
       break;
   }
 });

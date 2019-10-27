@@ -11,15 +11,15 @@ const expirationManager = new workbox.expiration.CacheExpiration(
     maxAgeSeconds: 30,
   });
 
-const updateEntry = (entryID) => {
-  caches.open('demo-cache-for-expiration')
-  .then((openCache) => {
-    openCache.put(
-      `example-entry-${entryID}`,
-      new Response(`Hello from entry number ${entryID}`)
-    );
-    expirationManager.updateTimestamp(`example-entry-${entryID}`);
-  });
+const updateEntry = async (entryID) => {
+  const openCache = await caches.open('demo-cache-for-expiration');
+  
+  openCache.put(
+    `example-entry-${entryID}`,
+    new Response(`Hello from entry number ${entryID}`)
+  );
+  
+  expirationManager.updateTimestamp(`example-entry-${entryID}`);
 };
 
 self.addEventListener('message', (event) => {
