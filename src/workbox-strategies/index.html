@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>workbox-strategies demo</title>
-      <meta name="workbox-strategies demo" content="An example to demonstrate the workbox-strategies module">
-      <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <style>
-        body {
-          margin-left: 5%;
-          font-family: 'Open Sans', sans-serif
-        }
-        ol {
-          padding-left: 20px
-        }
-        li {
-          margin-bottom: 5px
-        }
-        button {
-          margin: 20px 0;
-          font-weight: bold
-        }
-      </style>
-    </head>
-  <body id="page-top">
+  <head>
+    <title>workbox-strategies demo</title>
+    <meta name="workbox-strategies demo" content="An example to demonstrate the workbox-strategies module">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        margin-left: 5%;
+        font-family: 'Open Sans', sans-serif
+      }
+      ol {
+        padding-left: 20px
+      }
+      li {
+        margin-bottom: 5px
+      }
+      button {
+        margin: 20px 0;
+        font-weight: bold
+      }
+    </style>
+  </head>
+  <body>
 
-    <header class="bg-primary text-white">
-      <div class="container text-center">
+    <header>      
+      <div>
         <h1>workbox-strategies Demo</h1>
       </div>
     </header>
 
-  
     <ol>
       <li>Open DevTools</li>
       <li>Go to the Console</li>
@@ -40,14 +39,14 @@
         <ul>
           <li>
             <p>This will attempt to get a request from an empty cache.</p>
-            <p><button class="cache-only-empty-cache btn btn-outline-primary">Cache Only Request (To Empty Cache)</button></p>
+            <p><button class="cache-only-empty-cache">Cache Only Request (To Empty Cache)</button></p>
           </li>
-          <li><p><button class="cache-only-populated-cache btn btn-outline-primary">Cache Only Request (To Populated Cache)</button></p></li>
-          <li><p><button class="cache-first btn btn-outline-primary">Cache First Request (Try it Several Times)</button></p></li>
-          <li><p><button class="network-only btn btn-outline-primary">Network Only Request</button></p></li>
-          <li><p><button class="network-first-valid btn btn-outline-primary">Network First Request (Valid URL)</button></p></li>
-          <li><p><button class="network-first-failing btn btn-outline-primary">Network First Request (Failing URL)</button></p></li>
-          <li><p><button class="stale-while-revalidate btn btn-outline-primary">Stale While Revalidate Request</button></p></li>
+          <li><p><button class="cache-only-populated-cache">Cache Only Request (To Populated Cache)</button></p></li>
+          <li><p><button class="cache-first">Cache First Request (Try it Several Times)</button></p></li>
+          <li><p><button class="network-only">Network Only Request</button></p></li>
+          <li><p><button class="network-first-valid">Network First Request (Valid URL)</button></p></li>
+          <li><p><button class="network-first-failing">Network First Request (Failing URL)</button></p></li>
+          <li><p><button class="stale-while-revalidate">Stale While Revalidate Request</button></p></li>
         </ul>
       </li>
     </ol>
@@ -111,13 +110,14 @@
       });
     </script>
 
+
     <a href="https://developers.google.com/web/tools/workbox/modules">Back to Demos</a>
+
     <p>
 
     <a href="https://developers.google.com/web/tools/workbox">Docs</a> |
     <a href="https://github.com/googlechrome/workbox">GitHub</a> |
     <a href="https://twitter.com/workboxjs">@workboxjs</a>
     
-
   </body>
 </html>
