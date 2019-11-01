@@ -8,8 +8,6 @@ workbox.setConfig({
 //To avoid async issues, we load strategies before we call it in the event listener
 const {strategies} = workbox;
 
-
-//Needs a Request object, which I understand is provided by event.request. What am i missing?
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   switch (new URL(event.request.url).pathname) {
